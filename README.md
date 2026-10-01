@@ -1,6 +1,6 @@
-﻿# 🎼 git-symphony
+﻿#  git-symphony
 
-**Every repository has a song. This tool lets you hear it.**
+Every repository has a song. This tool lets you hear it.
 
 `git-symphony` reads a repository's commit history and composes it into music.
 Each contributor becomes an instrument, every commit becomes a note, merges
@@ -10,17 +10,17 @@ one theme tune.
 
 It outputs:
 
-- 🎧 **`.wav`**: rendered by a built-in wavetable synthesizer, ready to play anywhere
-- 🎹 **`.mid`**: one track per contributor, ready to open in GarageBand, FL Studio, MuseScore or any DAW
-- 🌐 **`.html`**: a self-contained interactive player with a scrolling piano roll and the commit messages shown as it plays
-- 🧾 **`.json`**: the raw score, if you want to build your own visualizer
+- `.wav`: rendered by a built-in wavetable synthesizer, ready to play anywhere
+-  `.mid`: one track per contributor, ready to open in GarageBand, FL Studio, MuseScore or any DAW
+- `.html`: a self-contained interactive player with a scrolling piano roll and the commit messages shown as it plays
+- `.json`: the raw score, if you want to build your own visualizer
 
-It has **zero dependencies**: only Python 3.9+ and `git`.
+It has zero dependencies: only Python 3.9+ and `git`.
 
-▶️ **[Live demo](docs/demo.html)**: a simulated 300-commit history with 4 contributors.
+ [Live demo](docs/demo.html): a simulated 300-commit history with 4 contributors.
 Turn on GitHub Pages for the `docs/` folder to make it playable online.
 
-## Quick start
+Quick start
 
 ```bash
 pip install git+https://github.com/AravindBairi8/git-symphony
@@ -41,7 +41,7 @@ git clone https://github.com/torvalds/linux --depth 500
 gitsymphony linux -o linux.mid --scale dorian --tempo 140
 ```
 
-## How the history becomes music
+How the history becomes music
 
 | In the repository            | In the song                                                       |
 | ---------------------------- | ----------------------------------------------------------------- |
@@ -59,7 +59,7 @@ gitsymphony linux -o linux.mid --scale dorian --tempo 140
 
 All notes are mapped onto a scale, so the result is always in tune.
 
-## Options
+Options
 
 ```
 gitsymphony [REPO] [-o FILE ...] [--rev REV] [-n MAX_COMMITS]
@@ -78,15 +78,15 @@ gitsymphony [REPO] [-o FILE ...] [--rev REV] [-n MAX_COMMITS]
 | `--tempo`         | `112`              | Beats per minute                                |
 | `--sample-rate`   | `22050`            | WAV quality (44100 for CD quality, but slower)  |
 
-## Ideas for using it
+Ideas for using it
 
 - Add the song of your project to your README
 - Compare the themes of `v1.0..v2.0` and `v2.0..v3.0`
 - Play your team's sprint as a song at the retro
 - Give the commit-history song to a contributor as a goodbye gift
-- The CI workflow in this repository composes **its own history** on every push; download it from the run's artifacts
+- The CI workflow in this repository composes its own history on every push; download it from the run's artifacts
 
-## Project layout
+Project layout
 
 ```
 gitsymphony/
@@ -99,7 +99,7 @@ gitsymphony/
 tests/         unittest suite (no extra packages needed)
 ```
 
-## Development
+Development
 
 ```bash
 python -m unittest discover -s tests -v
@@ -108,6 +108,6 @@ python -m unittest discover -s tests -v
 Contributions are welcome. New scales, instruments and musical rules make
 great first pull requests.
 
-## License
+License
 
 MIT
